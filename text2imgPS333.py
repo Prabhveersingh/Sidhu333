@@ -14,16 +14,25 @@ st.set_page_config(
 st.markdown(
     f"""
     <style>
-    .stApp {{
-        background-image: url("https://i.ibb.co/5Wp2sxxn/1000319964-removebg-preview.png");
-        background-size: contain;
+    .stApp::before {{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url("https://i.ibb.co/6Jfmhkh7/34e1a10894d62bce16ac68a92e98931e.jpg");
+        background-size: cover;
         background-repeat: no-repeat;
-        background-position: top center;
-        background-attachment: fixed;
+        background-position: center;
+        opacity: 0.15;  /* 👈 Thoda halka effect */
+        z-index: -1;
     }}
     .block-container {{
         padding-top: 2rem;
         padding-bottom: 2rem;
+        position: relative;
+        z-index: 1;
     }}
     input, textarea {{
         font-size: 18px !important;
